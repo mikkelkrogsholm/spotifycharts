@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# spotifycharts
+
+The goal of spotifycharts is to make it easy to get chart data from Spotify.
+
+The package is a wrapper for <https://spotifycharts.com/>
+
+## Installation
+
+You can install spotifycharts from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("56north/spotifycharts")
+```
+
+## Example
+
+Here is how you get chart data
+
+```{r example1}
+spotifycharts::chart_top200_daily()
+```
+
+You can also specify country (region) and dates.
+
+```{r example2}
+spotifycharts::chart_top200_daily(region = "us", days = "2016-11-03")
+```
